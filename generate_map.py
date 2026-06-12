@@ -145,7 +145,7 @@ def add_custom_styles(html_path):
             padding: 20px 0;
             font-family: "Rubik Glitch", system-ui; /* Para mudar a fonte principal, altere aqui */
             background-image: url('processed_photos/684594340.jpg');
-            background-size: 300px 200px;
+            background-size: 150px 100px;
             background-repeat: repeat;
             display: flex;
             flex-direction: column;
@@ -173,7 +173,7 @@ def add_custom_styles(html_path):
         /* O mapa inteiro é sobrescrito para Segoe UI */
         .folium-map {{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-            width: 80vw !important;
+            width: 95vw !important;
             height: 60vh !important;
             max-width: 1200px;
             max-height: 700px;
@@ -218,7 +218,12 @@ def add_custom_styles(html_path):
         }}
 
         .erb-popup {{
-            min-width: 350px;
+            width: 100%;
+            box-sizing: border-box;
+        }}
+
+        .erb-popup * {{
+             box-sizing: border-box;
         }}
         
         .erb-popup h3 {{
