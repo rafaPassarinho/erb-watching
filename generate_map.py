@@ -35,6 +35,8 @@ def generate_erb_map(data_json_path='data.json', output_html='index.html'):
     m = folium.Map(
         location=[center_lat, center_lon],
         zoom_start=13,
+        min_zoom=11, # Impede de afastar o mapa para o mundo inteiro
+        max_zoom=19, # Limitar o zoom in também, caso precise
         tiles=None # removemos tiles padrão
     )
 
@@ -65,7 +67,7 @@ def generate_erb_map(data_json_path='data.json', output_html='index.html'):
                 {erb['logradouro']}<br>
                 {erb['bairro']}, {erb['municipio']} - {erb['sigla_uf']}</p>
                 <img src="{erb['foto_path']}" alt="Foto ERB {erb['num_estacao']}" 
-                     style="width:100%; max-width:400px; border-radius:5px; margin-top:10px;"
+                     style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"
                      onerror="this.style.display='none'">
             </div>
         </div>
@@ -76,7 +78,7 @@ def generate_erb_map(data_json_path='data.json', output_html='index.html'):
         
         folium.Marker(
             location=[erb['latitude'], erb['longitude']],
-            popup=folium.Popup(popup_html, max_width=450),
+            popup=folium.Popup(popup_html, max_width=300, min_width=200),
             tooltip=f"{erb['operadora']} - ERB #{erb['num_estacao']}",
             icon=folium.Icon(color=icon_color, icon='signal', prefix='fa')
         ).add_to(operator_groups[erb['operadora']])
@@ -86,7 +88,7 @@ def generate_erb_map(data_json_path='data.json', output_html='index.html'):
         group.add_to(m)
 
     # adicionar controle de camadas
-    folium.LayerControl().add_to(m)
+    #folium.LayerControl().add_to(m)
 
     # adicionar mini mapa
     minimap = plugins.MiniMap(toggle_display=True)
