@@ -93,7 +93,7 @@ def generate_erb_map(data_json_path='data.json', output_html='index.html'):
     m.add_child(minimap)
 
     # adicionar botão de localização
-    plugins.Geocoder().add_to(m)
+    #plugins.Geocoder().add_to(m)
 
     # adicionar fullscreen
     plugins.Fullscreen().add_to(m)
@@ -114,7 +114,7 @@ def add_custom_styles(html_path):
     google_fonts_link = """
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
     """
 
     # Novo bloco de texto a ser inserido abaixo do mapa
@@ -141,7 +141,7 @@ def add_custom_styles(html_path):
         body {{
             margin: 0;
             padding: 20px 0;
-            font-family: "Rubik Broken Fax", system-ui; /* Para mudar a fonte principal, altere aqui */
+            font-family: "Rubik Glitch", system-ui; /* Para mudar a fonte principal, altere aqui */
             background-image: url('processed_photos/684594340.jpg');
             background-size: 300px 200px;
             background-repeat: repeat;
