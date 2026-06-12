@@ -170,6 +170,15 @@ def add_custom_styles(html_path):
             font-weight: 700;
         }}
 
+        .custom-header .subtitle {{
+            margin: 8px 0 0 0;
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }}
+
         /* O mapa inteiro é sobrescrito para Segoe UI */
         .folium-map {{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
@@ -261,7 +270,7 @@ def add_custom_styles(html_path):
     # 2. Folium insere o mapa direto no body. Vamos criar wrappers usando replace.
     # Envolvemos o <body> para inserir o título antes e a caixa de infos depois do mapa.
     content = content.replace('<body>', 
-                              '<body>\n<div class="page-wrapper">\n<div class="custom-header"><h1>ERB Watching</h1></div>')
+                              '<body>\n<div class="page-wrapper">\n<div class="custom-header"><h1>ERB Watching</h1><p class="subtitle">Registros de Estações de Rádio Base (ERBs) por aí.</p></div>')
     
     content = content.replace('</body>', 
                               f'\n{infra_info_html}\n</div>\n</body>')
