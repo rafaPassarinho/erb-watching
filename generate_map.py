@@ -1,8 +1,7 @@
 import folium
 import json
 from folium import plugins
-from pathlib import Path
-import random
+from datetime import datetime
 
 def get_operator_color(operadora):
     """Define cores específicas por operadora."""
@@ -135,6 +134,12 @@ def add_custom_styles(html_path):
         <p><strong>Streetlevel:</strong> ERB instalada em postes ou caixas de eletricidade ao nível da rua. É usada para fornecer cobertura em áreas urbanas movimentadas.</p>
     </div>
     """
+    day_text = datetime.now().strftime("%d/%m/%Y %H:%M")
+    update_html = f"""
+    <div class="update-note">
+        Atualizado em: {day_text}
+    </div>
+    """
 
     custom_css = f"""
     {google_fonts_link}
@@ -226,6 +231,16 @@ def add_custom_styles(html_path):
             font-size: 1.1em;
         }}
 
+        .update-note {{
+            width: 95vw;
+            max-width: 1200px;
+            text-align: right;
+            color: #100c08;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+        }}
+
         .erb-popup {{
             width: 100%;
             box-sizing: border-box;
@@ -273,7 +288,7 @@ def add_custom_styles(html_path):
                               '<body>\n<div class="page-wrapper">\n<div class="custom-header"><h1>ERB Watching</h1><p class="subtitle">Registros de Estações de Rádio Base (ERBs) por aí.</p></div>')
     
     content = content.replace('</body>', 
-                              f'\n{infra_info_html}\n</div>\n</body>')
+                              f'\n{update_html}\n{infra_info_html}\n</div>\n</body>')
     
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(content)

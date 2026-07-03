@@ -7496,8 +7496,8 @@
     "class_infra_fisica": "Greenfield",
     "tecnologias": "2G, 3G, 4G, 5G",
     "faixa": "700 850 1800 2100 2500 3500 ",
-    "tem_foto": false,
-    "foto_path": null
+    "tem_foto": true,
+    "foto_path": "processed_photos/1334239.jpg"
   },
   {
     "num_estacao": "2426650",
@@ -8576,8 +8576,8 @@
     "class_infra_fisica": "Rooftop",
     "tecnologias": "2G, 3G, 4G",
     "faixa": "700 1800 2100 2500 ",
-    "tem_foto": false,
-    "foto_path": null
+    "tem_foto": true,
+    "foto_path": "processed_photos/659061236.jpg"
   },
   {
     "num_estacao": "659061287",

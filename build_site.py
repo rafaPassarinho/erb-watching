@@ -85,10 +85,10 @@ def main():
         if file_path.exists():
             if file_path.is_dir():
                 photo_count = len(list(file_path.glob("*.jpg")))
-                print(f"  ✓ {file_path}/ ({photo_count} fotos)")
+                print(f" {file_path}/ ({photo_count} fotos)")
             else:
                 size_kb = file_path.stat().st_size / 1024
-                print(f"  ✓ {file_path} ({size_kb:.1f} KB)")
+                print(f" {file_path} ({size_kb:.1f} KB)")
 
 if __name__ == "__main__":
     main()
