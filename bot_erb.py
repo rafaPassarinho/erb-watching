@@ -98,29 +98,46 @@ def _rodar_git(comando: list, cwd: str=".") ->subprocess.CompletedProcess:
     """Executa um comando git e retorna o resultado bruto."""
     return subprocess.run(comando, cwd=cwd, capture_output=True, text=True)
 
-def configurar_remote_com_token():
-    """
-    Configura a URL do remote 'origin' embutindo o PAT,
-    evitando prompts interativos de autenticação [web:29][web:37].
-    """
-    remote_url = (
-        f"https://{GITHUB_USERNAME}:{GITHUB_PAT}@github.com/"
-        f"{GITHUB_USERNAME}/{GITHUB_REPO}.git"
-    )
-    resultado = _rodar_git(["git", "remote", "set-url", "origin", remote_url])
+def validar_credenciais_git() -> tuple[bool, str]:
+    """Valida variáveis de ambiente necessárias para publicar no GitHub."""
+    if not GITHUB_USERNAME:
+        return False, "GITHUB_USERNAME não definido no .env."
+    if not GITHUB_PAT:
+        return False, "GITHUB_PAT não definido no .env."
+    return True, "Credenciais OK."
+
+def validar_remote_origin() -> tuple[bool, str]:
+    """Valida se o remote origin está apontando para o repositório esperado."""
+    resultado = _rodar_git(["git", "remote", "get-url", "origin"])
     if resultado.returncode != 0:
-        raise RuntimeError(f"Falha ao configurar remote: {resultado.stderr}")
+        return False, f"Não foi possível ler o remote origin: {resultado.stderr.strip()}"
+
+    origin_url = (resultado.stdout or "").strip().lower()
+    esperado_https = f"github.com/{GITHUB_USERNAME.lower()}/{GITHUB_REPO.lower()}.git"
+    esperado_ssh = f"github.com:{GITHUB_USERNAME.lower()}/{GITHUB_REPO.lower()}.git"
+
+    if esperado_https not in origin_url and esperado_ssh not in origin_url:
+        return False, (
+            "Remote origin inválido. Ajuste com: "
+            f"git remote set-url origin https://github.com/{GITHUB_USERNAME}/{GITHUB_REPO}.git"
+        )
+
+    return True, "Remote origin OK."
 
 def executar_git_publish(num_estacao: int, branch: str=GITHUB_BRANCH) -> tuple[bool, str]:
     """
-    Executa add, commit e push. Trata erros de autenticação
-    e casos em que não há mudanças a commitar.
+    Executa add, commit e push usando o remote já configurado.
+    Trata erros de autenticação e casos em que não há mudanças a commitar.
     """
-    try:
-        configurar_remote_com_token()
-    except RuntimeError as e:
-        logger.error(str(e))
-        return False, f"Erro ao configurar credenciais do GitHub: {e}"
+    cred_ok, msg_cred = validar_credenciais_git()
+    if not cred_ok:
+        logger.error(msg_cred)
+        return False, msg_cred
+
+    remote_ok, msg_remote = validar_remote_origin()
+    if not remote_ok:
+        logger.error(msg_remote)
+        return False, msg_remote
     
     arquivos = [
         str(EXCEL_PATH),
