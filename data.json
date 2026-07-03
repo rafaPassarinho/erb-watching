@@ -6461,8 +6461,8 @@
     "class_infra_fisica": "Não especificada",
     "tecnologias": "3G, 4G",
     "faixa": "1800 2100 2500 ",
-    "tem_foto": false,
-    "foto_path": null
+    "tem_foto": true,
+    "foto_path": "processed_photos/1015693161.jpg"
   },
   {
     "num_estacao": "1015704201",
