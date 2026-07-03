@@ -8,6 +8,7 @@ Fluxo:
 4. Salva a foto em erb_photos/<num_estacao>.jpeg
 5. Atualiza a coluna 'caminho_foto' no Excel
 6. Executa build_site.py
+7. Faz commit e push autompatico -> atualiza o GitHub Pages
 """
 
 import os
@@ -30,6 +31,11 @@ from telegram.ext import (
 load_dotenv()  # Carrega variáveis de ambiente do arquivo .env
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
+GITHUB_USERNAME = os.getenv("GITHUB_USERNAME")
+GITHUB_PAT = os.getenv("GITHUB_PAT")
+GITHUB_REPO = "erb-watching"
+GITHUB_BRANCH = "main"
+
 EXCEL_PATH = Path("ERBs_Mar26_goiania_preprocessed.xlsx")
 PHOTOS_DIR = Path("erb_photos")
 SHEET_NAME = "Sheet1"
@@ -87,6 +93,71 @@ def executar_build_site() -> tuple[bool, str]:
         return True, resultado.stdout
     else:
         return False, resultado.stderr
+    
+def _rodar_git(comando: list, cwd: str=".") ->subprocess.CompletedProcess:
+    """Executa um comando git e retorna o resultado bruto."""
+    return subprocess.run(comando, cwd=cwd, capture_output=True, text=True)
+
+def configurar_remote_com_token():
+    """
+    Configura a URL do remote 'origin' embutindo o PAT,
+    evitando prompts interativos de autenticação [web:29][web:37].
+    """
+    remote_url = (
+        f"https://{GITHUB_USERNAME}:{GITHUB_PAT}@github.com/"
+        f"{GITHUB_USERNAME}/{GITHUB_REPO}.git"
+    )
+    resultado = _rodar_git(["git", "remote", "set-url", "origin", remote_url])
+    if resultado.returncode != 0:
+        raise RuntimeError(f"Falha ao configurar remote: {resultado.stderr}")
+
+def executar_git_publish(num_estacao: int, branch: str=GITHUB_BRANCH) -> tuple[bool, str]:
+    """
+    Executa add, commit e push. Trata erros de autenticação
+    e casos em que não há mudanças a commitar.
+    """
+    try:
+        configurar_remote_com_token()
+    except RuntimeError as e:
+        logger.error(str(e))
+        return False, f"Erro ao configurar credenciais do GitHub: {e}"
+    
+    arquivos = [
+        str(EXCEL_PATH),
+        "data.json",
+        "index.html",
+        "processed_photos",
+    ]
+
+    resultado_add = _rodar_git(["git", "add", *arquivos])
+    if resultado_add.returncode != 0:
+        return False, f"Erro no 'git add': {resultado_add.stderr}"
+
+    mensagem = f"Atualiza foto da estação {num_estacao} e rebuild do site"
+    resultado_commit = _rodar_git(["git", "commit", "-m", mensagem])
+    saida_commit = (resultado_commit.stdout + resultado_commit.stderr).lower()
+
+    if resultado_commit.returncode != 0:
+        if "nothing to commit" in saida_commit:
+            logger.info("Nada a commitar.")
+            return True, "Nenhuma mudança detectada, push não necessário."
+        return False, f"Erro no 'git commit': {resultado_commit.stderr}"
+    
+    resultado_push = _rodar_git(["git", "push", "origin", branch])
+    if resultado_push.returncode != 0:
+        erro = (resultado_push.stderr or "").lower()
+
+        # Tratamento específico de erros de credenciais/autenticação
+        if any(termo in erro for termo in ["authentication failed", "invalid credentials", "403", "permission denied"]):
+            logger.error("Falha de autenticação no push: %s", resultado_push.stderr)
+            return False, (
+                "Falha de autenticação no GitHub. Verifique se o "
+                "GITHUB_PAT ainda é válido e tem o escopo 'repo' habilitado."
+            )
+
+        return False, f"Erro no 'git push': {resultado_push.stderr}"
+
+    return True, "Push realizado com sucesso."
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Mensagem de boas-vindas com /start."""
@@ -181,20 +252,23 @@ async def receber_numero(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     
     await update.message.reply_text("Planilha atualizada. Atualizando o site...")
 
-    sucesso, saida = executar_build_site()
-    if sucesso:
+    sucesso_site, saida_site = executar_build_site()
+    if not sucesso_site:
         await update.message.reply_text(
-            "Site atualizado com sucesso!\n\n"
-            f"Foto salva em: `erb_photos/{num_estacao}.jpeg`",
-            parse_mode="Markdown"
+            f"Foto e Excel salvos, mas houve erro ao gerar o site:\n```\n{saida_site}\n```",
+            parse_mode="Markdown",
         )
-    else:
-        await update.message.reply_text(
-            f"Foto salva, mas houve erro ao gerar o site:\n```\n{saida}\n```",
-            parse_mode="Markdown"
-        )
+        context.user_data.clear()
+        return ConversationHandler.END
+    
+    await update.message.reply_text("Site atualizado com sucesso. Publicando no GitHub Pages...")
 
-    # limpa os dados temporários da conversa
+    sucesso_git, mensagem_git = executar_git_publish(num_estacao)
+    if sucesso_git:
+        await update.message.reply_text(f"{mensagem_git}\nFoto: `erb_photos/{num_estacao}.jpeg`", parse_mode="Markdown")
+    else:
+        await update.message.reply_text(f"Site gerado localmente, mas falhou ao publicar:\n{mensagem_git}")
+
     context.user_data.clear()
     return ConversationHandler.END
 
