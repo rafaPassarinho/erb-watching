@@ -220,3 +220,6 @@ __marimo__/
 
 # folders
 erb_photos/
+
+# instagrapi
+instagram_session.json
