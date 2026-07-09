@@ -176,6 +176,36 @@ def executar_git_publish(num_estacao: int, branch: str=GITHUB_BRANCH) -> tuple[b
 
     return True, "Push realizado com sucesso."
 
+def executar_instagram_post(num_estacao: int, modo_teste: bool = False) -> tuple[bool, str]:
+    """
+    Publica a foto no Instagram usando instagrapi.
+    Retorna (sucesso, mensagem).
+    """
+    comando = ["python", "instagram_post.py", "--erb", str(num_estacao)]
+    if modo_teste:
+        comando.append("--test")
+
+    resultado = subprocess.run(comando, capture_output=True, text=True)
+    saida = ((resultado.stdout or "")) + "\n" + ((resultado.stderr or "")).strip()
+    erro_lower = saida.lower()
+
+    if resultado.returncode == 0:
+        return True, saida
+    
+    if "credenciais do instagram não encontradas" in erro_lower:
+        return False, "Credenciais do Instagram ausentes no .env."
+    
+    if "challenge" in erro_lower:
+        return False, "Instagram solicitou verificação de segurança. Resolva manualmente na conta."
+    
+    if "login_required" in erro_lower:
+        return False, "Sessão do Instagram expirada. Faça login novamente."
+    
+    if "foto para erb" in erro_lower and "não encontrada" in erro_lower:
+        return False, "A foto foi salva no bot, mas o instagram_post.py não conseguiu encontrá-la."
+
+    return False, saida
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Mensagem de boas-vindas com /start."""
     await update.message.reply_text(

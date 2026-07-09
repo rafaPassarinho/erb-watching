@@ -140,9 +140,9 @@ class ERBInstagramPoster:
                     logger.warning(f"Foto muito pequena: {photo_path}")
                     return None
                 
-                # target_size = (1080, 1080)
-                # img.thumbnail(target_size, Image.Resampling.LANCZOS)
-                # img.save(photo_path, 'JPEG', quality=95)
+                target_size = (1080, 1080)
+                img.thumbnail(target_size, Image.Resampling.LANCZOS)
+                img.save(photo_path, 'JPEG', quality=95)
                 
                 return photo_path
                 
