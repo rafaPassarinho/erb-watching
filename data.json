@@ -5291,8 +5291,8 @@
     "class_infra_fisica": "Não especificada",
     "tecnologias": "4G",
     "faixa": "1800 2500 ",
-    "tem_foto": false,
-    "foto_path": null
+    "tem_foto": true,
+    "foto_path": "processed_photos/1013251072.jpg"
   },
   {
     "num_estacao": "1013251080",
