@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_7dcc84bf1692b46d749e7caad57f1d1f {
+                #map_b47541a03a0a25bd484b9a6bb789f840 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -195,12 +195,12 @@
 <div class="custom-header"><h1>ERB Watching</h1><p class="subtitle">Registros de Estações de Rádio Base (ERBs) por aí.</p></div>
     
     
-            <div class="folium-map" id="map_7dcc84bf1692b46d749e7caad57f1d1f" ></div>
+            <div class="folium-map" id="map_b47541a03a0a25bd484b9a6bb789f840" ></div>
         
 
 
     <div class="update-note">
-        Atualizado em: 10/07/2026 16:02
+        Atualizado em: 13/07/2026 14:47
     </div>
     
 
@@ -223,10 +223,10 @@
 <script>
     
     
-            var map_7dcc84bf1692b46d749e7caad57f1d1f = L.map(
-                "map_7dcc84bf1692b46d749e7caad57f1d1f",
+            var map_b47541a03a0a25bd484b9a6bb789f840 = L.map(
+                "map_b47541a03a0a25bd484b9a6bb789f840",
                 {
-                    center: [-16.673941000000003, -49.268938526315786],
+                    center: [-16.67474395, -49.2681026],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -241,7 +241,7 @@
 
         
     
-            var tile_layer_86d22715aa453d71be69b9a5dc9c4c87 = L.tileLayer(
+            var tile_layer_b1759e6418442fab69917a24d805b0eb = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -258,23 +258,23 @@
             );
         
     
-            tile_layer_86d22715aa453d71be69b9a5dc9c4c87.addTo(map_7dcc84bf1692b46d749e7caad57f1d1f);
+            tile_layer_b1759e6418442fab69917a24d805b0eb.addTo(map_b47541a03a0a25bd484b9a6bb789f840);
         
     
-            var feature_group_6748a5f8b74972375fc98db0cdb5ebfe = L.featureGroup(
+            var feature_group_ccac744f1e3cc6f8ef07044ce61c6e7c = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_b1c32148f36fc2ee7e5b560ff350c837 = L.marker(
+            var marker_7907879a0e005acdca0aa019b5119f1d = L.marker(
                 [-16.68263, -49.25543],
                 {
 }
-            ).addTo(feature_group_6748a5f8b74972375fc98db0cdb5ebfe);
+            ).addTo(feature_group_ccac744f1e3cc6f8ef07044ce61c6e7c);
         
     
-            var icon_ef9eb924f213b4f53c2cde4a947de325 = L.AwesomeMarkers.icon(
+            var icon_a42e5209ed331fc855bed2ca862e169f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -285,25 +285,25 @@
             );
         
     
-        var popup_a99c132939619e56ba992a431b5a432b = L.popup({
+        var popup_bce6f4e009febd1ed0f83dff472c43c6 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_c50bbf516abb52a197e2cedee940259f = $(`<div id="html_c50bbf516abb52a197e2cedee940259f" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1011304616</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Harmonizada</p>                 <p><strong>Localização:</strong><br>                 RUA 82, S/N, JOSEPHINA LUDOVICO<br>                 Setor Sul, Goiânia - GO</p>                 <img src="processed_photos/1011304616.jpg" alt="Foto ERB 1011304616"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_a99c132939619e56ba992a431b5a432b.setContent(html_c50bbf516abb52a197e2cedee940259f);
+                var html_6b8825f2afe81e5370edd23761db871f = $(`<div id="html_6b8825f2afe81e5370edd23761db871f" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1011304616</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Harmonizada</p>                 <p><strong>Localização:</strong><br>                 RUA 82, S/N, JOSEPHINA LUDOVICO<br>                 Setor Sul, Goiânia - GO</p>                 <img src="processed_photos/1011304616.jpg" alt="Foto ERB 1011304616"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_bce6f4e009febd1ed0f83dff472c43c6.setContent(html_6b8825f2afe81e5370edd23761db871f);
             
         
 
-        marker_b1c32148f36fc2ee7e5b560ff350c837.bindPopup(popup_a99c132939619e56ba992a431b5a432b)
+        marker_7907879a0e005acdca0aa019b5119f1d.bindPopup(popup_bce6f4e009febd1ed0f83dff472c43c6)
         ;
 
         
     
     
-            marker_b1c32148f36fc2ee7e5b560ff350c837.bindTooltip(
+            marker_7907879a0e005acdca0aa019b5119f1d.bindTooltip(
                 `<div>
                      CLARO - ERB #1011304616
                  </div>`,
@@ -313,17 +313,17 @@
             );
         
     
-                marker_b1c32148f36fc2ee7e5b560ff350c837.setIcon(icon_ef9eb924f213b4f53c2cde4a947de325);
+                marker_7907879a0e005acdca0aa019b5119f1d.setIcon(icon_a42e5209ed331fc855bed2ca862e169f);
             
     
-            var marker_018fa3bc3731d02a1350e9c593b3d030 = L.marker(
+            var marker_08908d198c3ae62ec3ba76aeae4f2e7f = L.marker(
                 [-16.68556, -49.25948],
                 {
 }
-            ).addTo(feature_group_6748a5f8b74972375fc98db0cdb5ebfe);
+            ).addTo(feature_group_ccac744f1e3cc6f8ef07044ce61c6e7c);
         
     
-            var icon_28d1d099b996fe898046d54392147cdb = L.AwesomeMarkers.icon(
+            var icon_663add537026762c48e5638085899e5a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -334,25 +334,25 @@
             );
         
     
-        var popup_911fa6a180ce0535da07442f56b44e05 = L.popup({
+        var popup_733715aaf9081830e4485f78342d8a9b = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_d75ef898facbca3f39ce9192231d978c = $(`<div id="html_d75ef898facbca3f39ce9192231d978c" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1012979137</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 850 900 1800 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 R 101, 387, CONDOMINIO EDIFICIO COLUMBIA CENTER<br>                 Setor Sul, Goiânia - GO</p>                 <img src="processed_photos/1012979137.jpg" alt="Foto ERB 1012979137"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_911fa6a180ce0535da07442f56b44e05.setContent(html_d75ef898facbca3f39ce9192231d978c);
+                var html_52a66ef4fbb607d7ac397514f9ab35b5 = $(`<div id="html_52a66ef4fbb607d7ac397514f9ab35b5" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1012979137</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 850 900 1800 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 R 101, 387, CONDOMINIO EDIFICIO COLUMBIA CENTER<br>                 Setor Sul, Goiânia - GO</p>                 <img src="processed_photos/1012979137.jpg" alt="Foto ERB 1012979137"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_733715aaf9081830e4485f78342d8a9b.setContent(html_52a66ef4fbb607d7ac397514f9ab35b5);
             
         
 
-        marker_018fa3bc3731d02a1350e9c593b3d030.bindPopup(popup_911fa6a180ce0535da07442f56b44e05)
+        marker_08908d198c3ae62ec3ba76aeae4f2e7f.bindPopup(popup_733715aaf9081830e4485f78342d8a9b)
         ;
 
         
     
     
-            marker_018fa3bc3731d02a1350e9c593b3d030.bindTooltip(
+            marker_08908d198c3ae62ec3ba76aeae4f2e7f.bindTooltip(
                 `<div>
                      CLARO - ERB #1012979137
                  </div>`,
@@ -362,17 +362,17 @@
             );
         
     
-                marker_018fa3bc3731d02a1350e9c593b3d030.setIcon(icon_28d1d099b996fe898046d54392147cdb);
+                marker_08908d198c3ae62ec3ba76aeae4f2e7f.setIcon(icon_663add537026762c48e5638085899e5a);
             
     
-            var marker_fadfa7dcd41b4c8a378468a01d1d75b9 = L.marker(
+            var marker_d0ec0280e8f24bb14004d5ece134dd7a = L.marker(
                 [-16.69947, -49.28241],
                 {
 }
-            ).addTo(feature_group_6748a5f8b74972375fc98db0cdb5ebfe);
+            ).addTo(feature_group_ccac744f1e3cc6f8ef07044ce61c6e7c);
         
     
-            var icon_1feea46c812108196b4323827bb831ca = L.AwesomeMarkers.icon(
+            var icon_8062a2991d29743e31c8d2c5a6d36964 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -383,25 +383,25 @@
             );
         
     
-        var popup_ee0294bc5f1ab8c068f91f2637b3eff4 = L.popup({
+        var popup_a73d7f8f1bd106203ac8894623bde963 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_1ff20997fde25e1bd8032af952d0c241 = $(`<div id="html_1ff20997fde25e1bd8032af952d0c241" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1015438498</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 R C 196, S/N, QUADRA 495 LT.24<br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/1015438498.jpg" alt="Foto ERB 1015438498"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_ee0294bc5f1ab8c068f91f2637b3eff4.setContent(html_1ff20997fde25e1bd8032af952d0c241);
+                var html_6b30addcbf5756d34b36f9789473791c = $(`<div id="html_6b30addcbf5756d34b36f9789473791c" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1015438498</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 R C 196, S/N, QUADRA 495 LT.24<br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/1015438498.jpg" alt="Foto ERB 1015438498"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_a73d7f8f1bd106203ac8894623bde963.setContent(html_6b30addcbf5756d34b36f9789473791c);
             
         
 
-        marker_fadfa7dcd41b4c8a378468a01d1d75b9.bindPopup(popup_ee0294bc5f1ab8c068f91f2637b3eff4)
+        marker_d0ec0280e8f24bb14004d5ece134dd7a.bindPopup(popup_a73d7f8f1bd106203ac8894623bde963)
         ;
 
         
     
     
-            marker_fadfa7dcd41b4c8a378468a01d1d75b9.bindTooltip(
+            marker_d0ec0280e8f24bb14004d5ece134dd7a.bindTooltip(
                 `<div>
                      CLARO - ERB #1015438498
                  </div>`,
@@ -411,17 +411,17 @@
             );
         
     
-                marker_fadfa7dcd41b4c8a378468a01d1d75b9.setIcon(icon_1feea46c812108196b4323827bb831ca);
+                marker_d0ec0280e8f24bb14004d5ece134dd7a.setIcon(icon_8062a2991d29743e31c8d2c5a6d36964);
             
     
-            var marker_cfb6ef982ae8cf26be7368529650e712 = L.marker(
+            var marker_a58a1db04b872c7c9945899d1e3cc7cb = L.marker(
                 [-16.6013, -49.262],
                 {
 }
-            ).addTo(feature_group_6748a5f8b74972375fc98db0cdb5ebfe);
+            ).addTo(feature_group_ccac744f1e3cc6f8ef07044ce61c6e7c);
         
     
-            var icon_551742ea88eb10fd2bf8990ec416f039 = L.AwesomeMarkers.icon(
+            var icon_0810c8e87055a6e2cb5d50aebdb04663 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -432,25 +432,25 @@
             );
         
     
-        var popup_b125f2ccc14076feb2f44823375acd9a = L.popup({
+        var popup_86c23c743bdff0af3eb01470fac37b64 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_42d915fa440a8a7ccec3db99dc56038a = $(`<div id="html_42d915fa440a8a7ccec3db99dc56038a" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #534789412</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 900 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 AVENIDA ESPERANÇA, S/N, CAMPUS PROF COLEMAR NATAL E SILVA (CAMPUS II) UFG, LADO ESTACIONAMENTO E RESTAURANTE UNIVERSITÁRIO CAMPUS SAMAMBAIA<br>                 Campus Universitario, Goiânia - GO</p>                 <img src="processed_photos/534789412.jpg" alt="Foto ERB 534789412"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_b125f2ccc14076feb2f44823375acd9a.setContent(html_42d915fa440a8a7ccec3db99dc56038a);
+                var html_ab04e4c277b5f25921b42f40db4c9b4a = $(`<div id="html_ab04e4c277b5f25921b42f40db4c9b4a" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #534789412</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 900 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 AVENIDA ESPERANÇA, S/N, CAMPUS PROF COLEMAR NATAL E SILVA (CAMPUS II) UFG, LADO ESTACIONAMENTO E RESTAURANTE UNIVERSITÁRIO CAMPUS SAMAMBAIA<br>                 Campus Universitario, Goiânia - GO</p>                 <img src="processed_photos/534789412.jpg" alt="Foto ERB 534789412"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_86c23c743bdff0af3eb01470fac37b64.setContent(html_ab04e4c277b5f25921b42f40db4c9b4a);
             
         
 
-        marker_cfb6ef982ae8cf26be7368529650e712.bindPopup(popup_b125f2ccc14076feb2f44823375acd9a)
+        marker_a58a1db04b872c7c9945899d1e3cc7cb.bindPopup(popup_86c23c743bdff0af3eb01470fac37b64)
         ;
 
         
     
     
-            marker_cfb6ef982ae8cf26be7368529650e712.bindTooltip(
+            marker_a58a1db04b872c7c9945899d1e3cc7cb.bindTooltip(
                 `<div>
                      CLARO - ERB #534789412
                  </div>`,
@@ -460,17 +460,17 @@
             );
         
     
-                marker_cfb6ef982ae8cf26be7368529650e712.setIcon(icon_551742ea88eb10fd2bf8990ec416f039);
+                marker_a58a1db04b872c7c9945899d1e3cc7cb.setIcon(icon_0810c8e87055a6e2cb5d50aebdb04663);
             
     
-            var marker_d1a9ca0e10600123e19017befa85a942 = L.marker(
+            var marker_c473f72efa31ddaea5dc177e1fbc7643 = L.marker(
                 [-16.70407, -49.2846],
                 {
 }
-            ).addTo(feature_group_6748a5f8b74972375fc98db0cdb5ebfe);
+            ).addTo(feature_group_ccac744f1e3cc6f8ef07044ce61c6e7c);
         
     
-            var icon_0aa96e9706364a8acf65d5fca7dfe0cf = L.AwesomeMarkers.icon(
+            var icon_69d3f34c1468f49dd70af9ebc25b2a43 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -481,25 +481,25 @@
             );
         
     
-        var popup_c79930551c4e21e0ed826bd3d67a8a14 = L.popup({
+        var popup_ecd2afee279ff36f5d6c0c8909cb4da1 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_ad1466c7882e5d5c13f1591e3cb4a833 = $(`<div id="html_ad1466c7882e5d5c13f1591e3cb4a833" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1016537996</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 R C209, 95, <br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/1016537996.jpg" alt="Foto ERB 1016537996"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_c79930551c4e21e0ed826bd3d67a8a14.setContent(html_ad1466c7882e5d5c13f1591e3cb4a833);
+                var html_c4b37609ca80d77db0913a1aff138d5f = $(`<div id="html_c4b37609ca80d77db0913a1aff138d5f" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1016537996</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> CLARO</p>                 <p><strong>Tecnologias:</strong> 2G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 R C209, 95, <br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/1016537996.jpg" alt="Foto ERB 1016537996"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_ecd2afee279ff36f5d6c0c8909cb4da1.setContent(html_c4b37609ca80d77db0913a1aff138d5f);
             
         
 
-        marker_d1a9ca0e10600123e19017befa85a942.bindPopup(popup_c79930551c4e21e0ed826bd3d67a8a14)
+        marker_c473f72efa31ddaea5dc177e1fbc7643.bindPopup(popup_ecd2afee279ff36f5d6c0c8909cb4da1)
         ;
 
         
     
     
-            marker_d1a9ca0e10600123e19017befa85a942.bindTooltip(
+            marker_c473f72efa31ddaea5dc177e1fbc7643.bindTooltip(
                 `<div>
                      CLARO - ERB #1016537996
                  </div>`,
@@ -509,26 +509,26 @@
             );
         
     
-                marker_d1a9ca0e10600123e19017befa85a942.setIcon(icon_0aa96e9706364a8acf65d5fca7dfe0cf);
+                marker_c473f72efa31ddaea5dc177e1fbc7643.setIcon(icon_69d3f34c1468f49dd70af9ebc25b2a43);
             
     
-            feature_group_6748a5f8b74972375fc98db0cdb5ebfe.addTo(map_7dcc84bf1692b46d749e7caad57f1d1f);
+            feature_group_ccac744f1e3cc6f8ef07044ce61c6e7c.addTo(map_b47541a03a0a25bd484b9a6bb789f840);
         
     
-            var feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2 = L.featureGroup(
+            var feature_group_bdc92b08a198299e8e6cb9e96094b9a0 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_ce30501f276c736c24a3e804258b9ac8 = L.marker(
+            var marker_d8804d13abf837246a4d67606cefd1a3 = L.marker(
                 [-16.695992, -49.285986],
                 {
 }
-            ).addTo(feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2);
+            ).addTo(feature_group_bdc92b08a198299e8e6cb9e96094b9a0);
         
     
-            var icon_752b42ede13f6b791f25048dc292831f = L.AwesomeMarkers.icon(
+            var icon_c3fe4e3bac7cbf9f69fde32dbe23171d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "purple",
   "iconColor": "white",
@@ -539,25 +539,25 @@
             );
         
     
-        var popup_d684226c211d9a6e670ea26c8fff53a3 = L.popup({
+        var popup_96023735dfcbf7ec890ab016fd65c61d = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_1efb050f8675b46ea85e48b3c7c1ac8d = $(`<div id="html_1efb050f8675b46ea85e48b3c7c1ac8d" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1001330053</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 AVENIDA C QUATRO, 384, <br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/1001330053.jpg" alt="Foto ERB 1001330053"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_d684226c211d9a6e670ea26c8fff53a3.setContent(html_1efb050f8675b46ea85e48b3c7c1ac8d);
+                var html_46732c5be10c0ce837326120b3416abe = $(`<div id="html_46732c5be10c0ce837326120b3416abe" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1001330053</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 AVENIDA C QUATRO, 384, <br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/1001330053.jpg" alt="Foto ERB 1001330053"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_96023735dfcbf7ec890ab016fd65c61d.setContent(html_46732c5be10c0ce837326120b3416abe);
             
         
 
-        marker_ce30501f276c736c24a3e804258b9ac8.bindPopup(popup_d684226c211d9a6e670ea26c8fff53a3)
+        marker_d8804d13abf837246a4d67606cefd1a3.bindPopup(popup_96023735dfcbf7ec890ab016fd65c61d)
         ;
 
         
     
     
-            marker_ce30501f276c736c24a3e804258b9ac8.bindTooltip(
+            marker_d8804d13abf837246a4d67606cefd1a3.bindTooltip(
                 `<div>
                      VIVO - ERB #1001330053
                  </div>`,
@@ -567,17 +567,17 @@
             );
         
     
-                marker_ce30501f276c736c24a3e804258b9ac8.setIcon(icon_752b42ede13f6b791f25048dc292831f);
+                marker_d8804d13abf837246a4d67606cefd1a3.setIcon(icon_c3fe4e3bac7cbf9f69fde32dbe23171d);
             
     
-            var marker_b0029d4ee01e855e503e68f3e56c239b = L.marker(
+            var marker_3b18aab020a9a2e642457247253d1655 = L.marker(
                 [-16.68139, -49.25817],
                 {
 }
-            ).addTo(feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2);
+            ).addTo(feature_group_bdc92b08a198299e8e6cb9e96094b9a0);
         
     
-            var icon_27c0c5d96a2e64b5d3c078cb68f19216 = L.AwesomeMarkers.icon(
+            var icon_76cc5a6e7a1b52b8ab510a0b75f39401 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "purple",
   "iconColor": "white",
@@ -588,25 +588,25 @@
             );
         
     
-        var popup_055e5448539449d20fce9a17965f1a90 = L.popup({
+        var popup_361aff4fd7510db0f3cb28f908cc5fda = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_b30451f8ae7ab880215cae32f5defec8 = $(`<div id="html_b30451f8ae7ab880215cae32f5defec8" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1008807343</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 4G, 5G</p>                 <p><strong>Faixas:</strong> 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 RUA OITENTA E DOIS, 633, RBR-NÃO<br>                 Centro, Goiânia - GO</p>                 <img src="processed_photos/1008807343.jpg" alt="Foto ERB 1008807343"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_055e5448539449d20fce9a17965f1a90.setContent(html_b30451f8ae7ab880215cae32f5defec8);
+                var html_6b5c5a9ba0911ef71a45e53fbc55359b = $(`<div id="html_6b5c5a9ba0911ef71a45e53fbc55359b" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1008807343</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 4G, 5G</p>                 <p><strong>Faixas:</strong> 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 RUA OITENTA E DOIS, 633, RBR-NÃO<br>                 Centro, Goiânia - GO</p>                 <img src="processed_photos/1008807343.jpg" alt="Foto ERB 1008807343"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_361aff4fd7510db0f3cb28f908cc5fda.setContent(html_6b5c5a9ba0911ef71a45e53fbc55359b);
             
         
 
-        marker_b0029d4ee01e855e503e68f3e56c239b.bindPopup(popup_055e5448539449d20fce9a17965f1a90)
+        marker_3b18aab020a9a2e642457247253d1655.bindPopup(popup_361aff4fd7510db0f3cb28f908cc5fda)
         ;
 
         
     
     
-            marker_b0029d4ee01e855e503e68f3e56c239b.bindTooltip(
+            marker_3b18aab020a9a2e642457247253d1655.bindTooltip(
                 `<div>
                      VIVO - ERB #1008807343
                  </div>`,
@@ -616,17 +616,17 @@
             );
         
     
-                marker_b0029d4ee01e855e503e68f3e56c239b.setIcon(icon_27c0c5d96a2e64b5d3c078cb68f19216);
+                marker_3b18aab020a9a2e642457247253d1655.setIcon(icon_76cc5a6e7a1b52b8ab510a0b75f39401);
             
     
-            var marker_1863be4c78f44e435d160193df757659 = L.marker(
+            var marker_0004f711a9eb943a5d4b561d1761e071 = L.marker(
                 [-16.701083, -49.278889],
                 {
 }
-            ).addTo(feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2);
+            ).addTo(feature_group_bdc92b08a198299e8e6cb9e96094b9a0);
         
     
-            var icon_0ac2a943f3f1765b991d6e18bb8e9e3e = L.AwesomeMarkers.icon(
+            var icon_4d2f553cd667e965f15b11a3145dc068 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "purple",
   "iconColor": "white",
@@ -637,25 +637,25 @@
             );
         
     
-        var popup_27c3cb0454fbd5f81bd3c686e62497be = L.popup({
+        var popup_6d92ce8b27cc059a8a17fc11dc6dc8e8 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_960d903e9298f926a378cb1bea95879b = $(`<div id="html_960d903e9298f926a378cb1bea95879b" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1012293243</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 AVENIDA C 197 QUADRA 498 A, S/N, <br>                 Setor Bueno, Goiânia - GO</p>                 <img src="processed_photos/1012293243.jpg" alt="Foto ERB 1012293243"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_27c3cb0454fbd5f81bd3c686e62497be.setContent(html_960d903e9298f926a378cb1bea95879b);
+                var html_3239e9619c4ed6953fbd0d20300215f3 = $(`<div id="html_3239e9619c4ed6953fbd0d20300215f3" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1012293243</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 AVENIDA C 197 QUADRA 498 A, S/N, <br>                 Setor Bueno, Goiânia - GO</p>                 <img src="processed_photos/1012293243.jpg" alt="Foto ERB 1012293243"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_6d92ce8b27cc059a8a17fc11dc6dc8e8.setContent(html_3239e9619c4ed6953fbd0d20300215f3);
             
         
 
-        marker_1863be4c78f44e435d160193df757659.bindPopup(popup_27c3cb0454fbd5f81bd3c686e62497be)
+        marker_0004f711a9eb943a5d4b561d1761e071.bindPopup(popup_6d92ce8b27cc059a8a17fc11dc6dc8e8)
         ;
 
         
     
     
-            marker_1863be4c78f44e435d160193df757659.bindTooltip(
+            marker_0004f711a9eb943a5d4b561d1761e071.bindTooltip(
                 `<div>
                      VIVO - ERB #1012293243
                  </div>`,
@@ -665,17 +665,17 @@
             );
         
     
-                marker_1863be4c78f44e435d160193df757659.setIcon(icon_0ac2a943f3f1765b991d6e18bb8e9e3e);
+                marker_0004f711a9eb943a5d4b561d1761e071.setIcon(icon_4d2f553cd667e965f15b11a3145dc068);
             
     
-            var marker_edee9ca5fb1cbe20db9941fd55a4c89c = L.marker(
+            var marker_3f902446a2c03caa366cbfa036464bd8 = L.marker(
                 [-16.67639, -49.27361],
                 {
 }
-            ).addTo(feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2);
+            ).addTo(feature_group_bdc92b08a198299e8e6cb9e96094b9a0);
         
     
-            var icon_fe3d5d9ce10cc53ced2a9d3b2201747c = L.AwesomeMarkers.icon(
+            var icon_4f7a728e8b834e2ee078256b325fe75e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "purple",
   "iconColor": "white",
@@ -686,25 +686,25 @@
             );
         
     
-        var popup_1daa13f46c64695fde899549e823f260 = L.popup({
+        var popup_585834ce966daff44e9ea87a29ce5487 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_a1cfc6ec1764ae19307dc8d25cdd49c8 = $(`<div id="html_a1cfc6ec1764ae19307dc8d25cdd49c8" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1334239</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 RUA 29 A, QUADRA AREA, LOTE AREA, DENTRO DO CORPO BOMBEIROS, Setor Aeroporto, S/N, <br>                 Setor Aeroporto, Goiânia - GO</p>                 <img src="processed_photos/1334239.jpg" alt="Foto ERB 1334239"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_1daa13f46c64695fde899549e823f260.setContent(html_a1cfc6ec1764ae19307dc8d25cdd49c8);
+                var html_d5e9511da19e28eafedd0c16952790d0 = $(`<div id="html_d5e9511da19e28eafedd0c16952790d0" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1334239</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 RUA 29 A, QUADRA AREA, LOTE AREA, DENTRO DO CORPO BOMBEIROS, Setor Aeroporto, S/N, <br>                 Setor Aeroporto, Goiânia - GO</p>                 <img src="processed_photos/1334239.jpg" alt="Foto ERB 1334239"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_585834ce966daff44e9ea87a29ce5487.setContent(html_d5e9511da19e28eafedd0c16952790d0);
             
         
 
-        marker_edee9ca5fb1cbe20db9941fd55a4c89c.bindPopup(popup_1daa13f46c64695fde899549e823f260)
+        marker_3f902446a2c03caa366cbfa036464bd8.bindPopup(popup_585834ce966daff44e9ea87a29ce5487)
         ;
 
         
     
     
-            marker_edee9ca5fb1cbe20db9941fd55a4c89c.bindTooltip(
+            marker_3f902446a2c03caa366cbfa036464bd8.bindTooltip(
                 `<div>
                      VIVO - ERB #1334239
                  </div>`,
@@ -714,17 +714,17 @@
             );
         
     
-                marker_edee9ca5fb1cbe20db9941fd55a4c89c.setIcon(icon_fe3d5d9ce10cc53ced2a9d3b2201747c);
+                marker_3f902446a2c03caa366cbfa036464bd8.setIcon(icon_4f7a728e8b834e2ee078256b325fe75e);
             
     
-            var marker_6e4b98365c96ba68a4ed0c9a1c652909 = L.marker(
+            var marker_f627edb18dcead59d75e781626cf0af5 = L.marker(
                 [-16.602211, -49.263061],
                 {
 }
-            ).addTo(feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2);
+            ).addTo(feature_group_bdc92b08a198299e8e6cb9e96094b9a0);
         
     
-            var icon_3111a8a6fb62864f4d7b1f15874b83aa = L.AwesomeMarkers.icon(
+            var icon_5c8ff208f70dadea96ab5d299199664f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "purple",
   "iconColor": "white",
@@ -735,25 +735,25 @@
             );
         
     
-        var popup_615e5b0348c748ffe88e51af26e412d4 = L.popup({
+        var popup_29593408b660156dd8164157b13ada53 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_afdd8a9b0102822faba45fc45aea0b2e = $(`<div id="html_afdd8a9b0102822faba45fc45aea0b2e" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #396806651</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 ROD GO-080 CAMPUS II, 80, <br>                 Jardim Novo Mundo, Goiânia - GO</p>                 <img src="processed_photos/396806651.jpg" alt="Foto ERB 396806651"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_615e5b0348c748ffe88e51af26e412d4.setContent(html_afdd8a9b0102822faba45fc45aea0b2e);
+                var html_53253d125e67da7ecb125fbe8ed98eff = $(`<div id="html_53253d125e67da7ecb125fbe8ed98eff" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #396806651</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 ROD GO-080 CAMPUS II, 80, <br>                 Jardim Novo Mundo, Goiânia - GO</p>                 <img src="processed_photos/396806651.jpg" alt="Foto ERB 396806651"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_29593408b660156dd8164157b13ada53.setContent(html_53253d125e67da7ecb125fbe8ed98eff);
             
         
 
-        marker_6e4b98365c96ba68a4ed0c9a1c652909.bindPopup(popup_615e5b0348c748ffe88e51af26e412d4)
+        marker_f627edb18dcead59d75e781626cf0af5.bindPopup(popup_29593408b660156dd8164157b13ada53)
         ;
 
         
     
     
-            marker_6e4b98365c96ba68a4ed0c9a1c652909.bindTooltip(
+            marker_f627edb18dcead59d75e781626cf0af5.bindTooltip(
                 `<div>
                      VIVO - ERB #396806651
                  </div>`,
@@ -763,17 +763,17 @@
             );
         
     
-                marker_6e4b98365c96ba68a4ed0c9a1c652909.setIcon(icon_3111a8a6fb62864f4d7b1f15874b83aa);
+                marker_f627edb18dcead59d75e781626cf0af5.setIcon(icon_5c8ff208f70dadea96ab5d299199664f);
             
     
-            var marker_75851b73955f5347c7cc7edd9b434988 = L.marker(
+            var marker_2e73231704272d6ee95d1b3cf54d366e = L.marker(
                 [-16.689928, -49.269969],
                 {
 }
-            ).addTo(feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2);
+            ).addTo(feature_group_bdc92b08a198299e8e6cb9e96094b9a0);
         
     
-            var icon_20e3c5957c9da6fe8a643f95f40ffea9 = L.AwesomeMarkers.icon(
+            var icon_e555ce426a1753eb203c0598f11eaddb = L.AwesomeMarkers.icon(
                 {
   "markerColor": "purple",
   "iconColor": "white",
@@ -784,25 +784,25 @@
             );
         
     
-        var popup_2612bcd5424bb6fc14fd0ec70a4b3240 = L.popup({
+        var popup_8d795150710c88bbf6a4c0856b1c346b = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_c6e410417e6c17edc21a080133edfebb = $(`<div id="html_c6e410417e6c17edc21a080133edfebb" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #684592398</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 AVENIDA PORTUGAL, 433, RBR-NÃO<br>                 Setor Oeste, Goiânia - GO</p>                 <img src="processed_photos/684592398.jpg" alt="Foto ERB 684592398"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_2612bcd5424bb6fc14fd0ec70a4b3240.setContent(html_c6e410417e6c17edc21a080133edfebb);
+                var html_e33d93df2d9f0951918227101dccddc1 = $(`<div id="html_e33d93df2d9f0951918227101dccddc1" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #684592398</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 1800 2100 2300 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 AVENIDA PORTUGAL, 433, RBR-NÃO<br>                 Setor Oeste, Goiânia - GO</p>                 <img src="processed_photos/684592398.jpg" alt="Foto ERB 684592398"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_8d795150710c88bbf6a4c0856b1c346b.setContent(html_e33d93df2d9f0951918227101dccddc1);
             
         
 
-        marker_75851b73955f5347c7cc7edd9b434988.bindPopup(popup_2612bcd5424bb6fc14fd0ec70a4b3240)
+        marker_2e73231704272d6ee95d1b3cf54d366e.bindPopup(popup_8d795150710c88bbf6a4c0856b1c346b)
         ;
 
         
     
     
-            marker_75851b73955f5347c7cc7edd9b434988.bindTooltip(
+            marker_2e73231704272d6ee95d1b3cf54d366e.bindTooltip(
                 `<div>
                      VIVO - ERB #684592398
                  </div>`,
@@ -812,17 +812,17 @@
             );
         
     
-                marker_75851b73955f5347c7cc7edd9b434988.setIcon(icon_20e3c5957c9da6fe8a643f95f40ffea9);
+                marker_2e73231704272d6ee95d1b3cf54d366e.setIcon(icon_e555ce426a1753eb203c0598f11eaddb);
             
     
-            var marker_f18fa55dae35908e4d8d5162bd269d75 = L.marker(
+            var marker_9d2bae60b57c50f62ad8275b63342da5 = L.marker(
                 [-16.702664, -49.288286],
                 {
 }
-            ).addTo(feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2);
+            ).addTo(feature_group_bdc92b08a198299e8e6cb9e96094b9a0);
         
     
-            var icon_de33ec45f2e0a3f719808e314156c27e = L.AwesomeMarkers.icon(
+            var icon_7e72f391e061957ff6c5994d0a969c4f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "purple",
   "iconColor": "white",
@@ -833,25 +833,25 @@
             );
         
     
-        var popup_31286e5589119aef9a5b2d4afbf74e08 = L.popup({
+        var popup_c2b28670debc55a4fa4347c339f99712 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_66de4f57225aa69a3c393aa343da2dc3 = $(`<div id="html_66de4f57225aa69a3c393aa343da2dc3" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #684594340</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 RUA C CENTO E DEZESSEIS, 274, RBR-NÃO<br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/684594340.jpg" alt="Foto ERB 684594340"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_31286e5589119aef9a5b2d4afbf74e08.setContent(html_66de4f57225aa69a3c393aa343da2dc3);
+                var html_11165b623399f79f14e1cc9ca4bac952 = $(`<div id="html_11165b623399f79f14e1cc9ca4bac952" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #684594340</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> VIVO</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 850 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Greenfield</p>                 <p><strong>Localização:</strong><br>                 RUA C CENTO E DEZESSEIS, 274, RBR-NÃO<br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/684594340.jpg" alt="Foto ERB 684594340"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_c2b28670debc55a4fa4347c339f99712.setContent(html_11165b623399f79f14e1cc9ca4bac952);
             
         
 
-        marker_f18fa55dae35908e4d8d5162bd269d75.bindPopup(popup_31286e5589119aef9a5b2d4afbf74e08)
+        marker_9d2bae60b57c50f62ad8275b63342da5.bindPopup(popup_c2b28670debc55a4fa4347c339f99712)
         ;
 
         
     
     
-            marker_f18fa55dae35908e4d8d5162bd269d75.bindTooltip(
+            marker_9d2bae60b57c50f62ad8275b63342da5.bindTooltip(
                 `<div>
                      VIVO - ERB #684594340
                  </div>`,
@@ -861,26 +861,26 @@
             );
         
     
-                marker_f18fa55dae35908e4d8d5162bd269d75.setIcon(icon_de33ec45f2e0a3f719808e314156c27e);
+                marker_9d2bae60b57c50f62ad8275b63342da5.setIcon(icon_7e72f391e061957ff6c5994d0a969c4f);
             
     
-            feature_group_b10d92b998e9fd22cd9cbd7cb94c17c2.addTo(map_7dcc84bf1692b46d749e7caad57f1d1f);
+            feature_group_bdc92b08a198299e8e6cb9e96094b9a0.addTo(map_b47541a03a0a25bd484b9a6bb789f840);
         
     
-            var feature_group_63a13efaa69157d3db28fece7c28f826 = L.featureGroup(
+            var feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_0044d89affe2cc8c270b964c435c08c4 = L.marker(
-                [-16.68694, -49.25444],
+            var marker_1257cd1afb43d5220710fe33dfaef92a = L.marker(
+                [-16.69, -49.25222],
                 {
 }
-            ).addTo(feature_group_63a13efaa69157d3db28fece7c28f826);
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
         
     
-            var icon_9209c00d623ead256f18bd9c393afe00 = L.AwesomeMarkers.icon(
+            var icon_278919d520b73d45b175e7c9b696b5d0 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -891,25 +891,74 @@
             );
         
     
-        var popup_dfdd93b32a0d7550b5893837c0d75f4c = L.popup({
+        var popup_542f69c7368f523db027278c44d7c8d8 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_918df3dcdb81350d105634dd6a2dba85 = $(`<div id="html_918df3dcdb81350d105634dd6a2dba85" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1013251072</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 4G</p>                 <p><strong>Faixas:</strong> 1800 2500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 Rua 84, 535 - Quadra F-23, Lote 46 (Ed. Rio Amazonas). Setor Sul, S/N, 0<br>                 -, Goiânia - GO</p>                 <img src="processed_photos/1013251072.jpg" alt="Foto ERB 1013251072"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_dfdd93b32a0d7550b5893837c0d75f4c.setContent(html_918df3dcdb81350d105634dd6a2dba85);
+                var html_e30b0bba62cbf70b633d43f08c537d4e = $(`<div id="html_e30b0bba62cbf70b633d43f08c537d4e" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1013250890</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 4G, 5G</p>                 <p><strong>Faixas:</strong> 1800 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 Pca Cdor Germano Roriz, 175. Setor Sul, S/N, 0<br>                 -, Goiânia - GO</p>                 <img src="processed_photos/1013250890.jpg" alt="Foto ERB 1013250890"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_542f69c7368f523db027278c44d7c8d8.setContent(html_e30b0bba62cbf70b633d43f08c537d4e);
             
         
 
-        marker_0044d89affe2cc8c270b964c435c08c4.bindPopup(popup_dfdd93b32a0d7550b5893837c0d75f4c)
+        marker_1257cd1afb43d5220710fe33dfaef92a.bindPopup(popup_542f69c7368f523db027278c44d7c8d8)
         ;
 
         
     
     
-            marker_0044d89affe2cc8c270b964c435c08c4.bindTooltip(
+            marker_1257cd1afb43d5220710fe33dfaef92a.bindTooltip(
+                `<div>
+                     TIM - ERB #1013250890
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1257cd1afb43d5220710fe33dfaef92a.setIcon(icon_278919d520b73d45b175e7c9b696b5d0);
+            
+    
+            var marker_9275fc5a2d765a7a03d52915fe509cb1 = L.marker(
+                [-16.68694, -49.25444],
+                {
+}
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
+        
+    
+            var icon_2ec9a653c187c2c3486eba941db8011a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "signal",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dec9fe432c0dae9be88aaa623cd7fadb = L.popup({
+  "maxWidth": 300,
+  "minWidth": 200,
+});
+
+        
+            
+                var html_cdea9fe5447eb90835d6204305b1d869 = $(`<div id="html_cdea9fe5447eb90835d6204305b1d869" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1013251072</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 4G</p>                 <p><strong>Faixas:</strong> 1800 2500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 Rua 84, 535 - Quadra F-23, Lote 46 (Ed. Rio Amazonas). Setor Sul, S/N, 0<br>                 -, Goiânia - GO</p>                 <img src="processed_photos/1013251072.jpg" alt="Foto ERB 1013251072"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_dec9fe432c0dae9be88aaa623cd7fadb.setContent(html_cdea9fe5447eb90835d6204305b1d869);
+            
+        
+
+        marker_9275fc5a2d765a7a03d52915fe509cb1.bindPopup(popup_dec9fe432c0dae9be88aaa623cd7fadb)
+        ;
+
+        
+    
+    
+            marker_9275fc5a2d765a7a03d52915fe509cb1.bindTooltip(
                 `<div>
                      TIM - ERB #1013251072
                  </div>`,
@@ -919,17 +968,17 @@
             );
         
     
-                marker_0044d89affe2cc8c270b964c435c08c4.setIcon(icon_9209c00d623ead256f18bd9c393afe00);
+                marker_9275fc5a2d765a7a03d52915fe509cb1.setIcon(icon_2ec9a653c187c2c3486eba941db8011a);
             
     
-            var marker_88ecf55fd7005abcbbf134ffe3ab72b9 = L.marker(
+            var marker_6d005631c2ce7e68dc26cbe57dd786e9 = L.marker(
                 [-16.665056, -49.254278],
                 {
 }
-            ).addTo(feature_group_63a13efaa69157d3db28fece7c28f826);
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
         
     
-            var icon_d5c9f07fa936ab1e5842c8eabfba644f = L.AwesomeMarkers.icon(
+            var icon_b9997ea4d788beb2f49634327d4c4566 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -940,25 +989,25 @@
             );
         
     
-        var popup_cbb45013f2e9643d6a865b37338acbe6 = L.popup({
+        var popup_c7da521fd54050ccde59488badd37797 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_f8fa3ee2b8b8db1e072c825ee355b75d = $(`<div id="html_f8fa3ee2b8b8db1e072c825ee355b75d" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1015693161</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 3G, 4G</p>                 <p><strong>Faixas:</strong> 1800 2100 2500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 RUA PROJETADA, S/N, <br>                 Centro, Goiânia - GO</p>                 <img src="processed_photos/1015693161.jpg" alt="Foto ERB 1015693161"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_cbb45013f2e9643d6a865b37338acbe6.setContent(html_f8fa3ee2b8b8db1e072c825ee355b75d);
+                var html_8b30e84348bd61088bb62700655b9efe = $(`<div id="html_8b30e84348bd61088bb62700655b9efe" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #1015693161</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 3G, 4G</p>                 <p><strong>Faixas:</strong> 1800 2100 2500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 RUA PROJETADA, S/N, <br>                 Centro, Goiânia - GO</p>                 <img src="processed_photos/1015693161.jpg" alt="Foto ERB 1015693161"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_c7da521fd54050ccde59488badd37797.setContent(html_8b30e84348bd61088bb62700655b9efe);
             
         
 
-        marker_88ecf55fd7005abcbbf134ffe3ab72b9.bindPopup(popup_cbb45013f2e9643d6a865b37338acbe6)
+        marker_6d005631c2ce7e68dc26cbe57dd786e9.bindPopup(popup_c7da521fd54050ccde59488badd37797)
         ;
 
         
     
     
-            marker_88ecf55fd7005abcbbf134ffe3ab72b9.bindTooltip(
+            marker_6d005631c2ce7e68dc26cbe57dd786e9.bindTooltip(
                 `<div>
                      TIM - ERB #1015693161
                  </div>`,
@@ -968,17 +1017,17 @@
             );
         
     
-                marker_88ecf55fd7005abcbbf134ffe3ab72b9.setIcon(icon_d5c9f07fa936ab1e5842c8eabfba644f);
+                marker_6d005631c2ce7e68dc26cbe57dd786e9.setIcon(icon_b9997ea4d788beb2f49634327d4c4566);
             
     
-            var marker_8e45e6c52eb130367cdad241e27106d5 = L.marker(
+            var marker_70e2f34ab112e6313b3c883f3a1c29f6 = L.marker(
                 [-16.696722, -49.28875],
                 {
 }
-            ).addTo(feature_group_63a13efaa69157d3db28fece7c28f826);
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
         
     
-            var icon_d3d02771cbf80d06106cd8aa4de5fefc = L.AwesomeMarkers.icon(
+            var icon_66a2ed92e0cdfd3383613cb4bcf85ed8 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -989,25 +1038,25 @@
             );
         
     
-        var popup_dc9b1ebfdbac2c8e8172208b6834f0d5 = L.popup({
+        var popup_4509c161a53c18c20cd5de41c764eb97 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_e6f4fd44142ebecc97077d6dc7c28d45 = $(`<div id="html_e6f4fd44142ebecc97077d6dc7c28d45" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #641273940</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Rua C-25, 25, Quadra 07 Lote 16<br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/641273940.jpg" alt="Foto ERB 641273940"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_dc9b1ebfdbac2c8e8172208b6834f0d5.setContent(html_e6f4fd44142ebecc97077d6dc7c28d45);
+                var html_fbcaa6032176d80e72e3cd45d59ea92b = $(`<div id="html_fbcaa6032176d80e72e3cd45d59ea92b" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #641273940</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Rua C-25, 25, Quadra 07 Lote 16<br>                 Jardim America, Goiânia - GO</p>                 <img src="processed_photos/641273940.jpg" alt="Foto ERB 641273940"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_4509c161a53c18c20cd5de41c764eb97.setContent(html_fbcaa6032176d80e72e3cd45d59ea92b);
             
         
 
-        marker_8e45e6c52eb130367cdad241e27106d5.bindPopup(popup_dc9b1ebfdbac2c8e8172208b6834f0d5)
+        marker_70e2f34ab112e6313b3c883f3a1c29f6.bindPopup(popup_4509c161a53c18c20cd5de41c764eb97)
         ;
 
         
     
     
-            marker_8e45e6c52eb130367cdad241e27106d5.bindTooltip(
+            marker_70e2f34ab112e6313b3c883f3a1c29f6.bindTooltip(
                 `<div>
                      TIM - ERB #641273940
                  </div>`,
@@ -1017,17 +1066,17 @@
             );
         
     
-                marker_8e45e6c52eb130367cdad241e27106d5.setIcon(icon_d3d02771cbf80d06106cd8aa4de5fefc);
+                marker_70e2f34ab112e6313b3c883f3a1c29f6.setIcon(icon_66a2ed92e0cdfd3383613cb4bcf85ed8);
             
     
-            var marker_c7d713dec224f43cde5a7dd832cf9b41 = L.marker(
+            var marker_f25518d72e8d04712019b6995522eb2d = L.marker(
                 [-16.674111, -49.257861],
                 {
 }
-            ).addTo(feature_group_63a13efaa69157d3db28fece7c28f826);
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
         
     
-            var icon_6dab4c6c80a163723a0eb9cd6c68ff18 = L.AwesomeMarkers.icon(
+            var icon_430c9edb66e60b0086ddd450004a75b2 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -1038,25 +1087,25 @@
             );
         
     
-        var popup_cb828b8e989af0958b974bab80efbde8 = L.popup({
+        var popup_df431537790f04d30ecbb144b9e3b8a9 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_08e63c7dfc347020cc72ab0d7b96ef3c = $(`<div id="html_08e63c7dfc347020cc72ab0d7b96ef3c" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #641274238</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Avenida Goias, 606, Quadra 10 Lote 64/67<br>                 Centro, Goiânia - GO</p>                 <img src="processed_photos/641274238.jpg" alt="Foto ERB 641274238"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_cb828b8e989af0958b974bab80efbde8.setContent(html_08e63c7dfc347020cc72ab0d7b96ef3c);
+                var html_a5a258c79807bdd2da2ac490fe7291e5 = $(`<div id="html_a5a258c79807bdd2da2ac490fe7291e5" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #641274238</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Avenida Goias, 606, Quadra 10 Lote 64/67<br>                 Centro, Goiânia - GO</p>                 <img src="processed_photos/641274238.jpg" alt="Foto ERB 641274238"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_df431537790f04d30ecbb144b9e3b8a9.setContent(html_a5a258c79807bdd2da2ac490fe7291e5);
             
         
 
-        marker_c7d713dec224f43cde5a7dd832cf9b41.bindPopup(popup_cb828b8e989af0958b974bab80efbde8)
+        marker_f25518d72e8d04712019b6995522eb2d.bindPopup(popup_df431537790f04d30ecbb144b9e3b8a9)
         ;
 
         
     
     
-            marker_c7d713dec224f43cde5a7dd832cf9b41.bindTooltip(
+            marker_f25518d72e8d04712019b6995522eb2d.bindTooltip(
                 `<div>
                      TIM - ERB #641274238
                  </div>`,
@@ -1066,17 +1115,17 @@
             );
         
     
-                marker_c7d713dec224f43cde5a7dd832cf9b41.setIcon(icon_6dab4c6c80a163723a0eb9cd6c68ff18);
+                marker_f25518d72e8d04712019b6995522eb2d.setIcon(icon_430c9edb66e60b0086ddd450004a75b2);
             
     
-            var marker_1ac5967a51c3a4f78553c8f4b02a0788 = L.marker(
+            var marker_0cc1091642076b61c006f080249db0b7 = L.marker(
                 [-16.6755, -49.272306],
                 {
 }
-            ).addTo(feature_group_63a13efaa69157d3db28fece7c28f826);
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
         
     
-            var icon_0d69a66276e43faaa49f175e91c8e4d8 = L.AwesomeMarkers.icon(
+            var icon_3feddde14d15f08eb30de5748a99b270 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -1087,25 +1136,25 @@
             );
         
     
-        var popup_ba8781e63329b79484b7696ee340d766 = L.popup({
+        var popup_de142345218c10fb0011cbdfd621390b = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_5daf0908d8846e08e171dc4fd2bdc698 = $(`<div id="html_5daf0908d8846e08e171dc4fd2bdc698" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #659061236</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Rua 16 A, 795, Lote 25/26 Quadra 16A<br>                 Setor Aeroporto, Goiânia - GO</p>                 <img src="processed_photos/659061236.jpg" alt="Foto ERB 659061236"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_ba8781e63329b79484b7696ee340d766.setContent(html_5daf0908d8846e08e171dc4fd2bdc698);
+                var html_4afbc21c7c3149c8189772862ac15954 = $(`<div id="html_4afbc21c7c3149c8189772862ac15954" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #659061236</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Rua 16 A, 795, Lote 25/26 Quadra 16A<br>                 Setor Aeroporto, Goiânia - GO</p>                 <img src="processed_photos/659061236.jpg" alt="Foto ERB 659061236"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_de142345218c10fb0011cbdfd621390b.setContent(html_4afbc21c7c3149c8189772862ac15954);
             
         
 
-        marker_1ac5967a51c3a4f78553c8f4b02a0788.bindPopup(popup_ba8781e63329b79484b7696ee340d766)
+        marker_0cc1091642076b61c006f080249db0b7.bindPopup(popup_de142345218c10fb0011cbdfd621390b)
         ;
 
         
     
     
-            marker_1ac5967a51c3a4f78553c8f4b02a0788.bindTooltip(
+            marker_0cc1091642076b61c006f080249db0b7.bindTooltip(
                 `<div>
                      TIM - ERB #659061236
                  </div>`,
@@ -1115,17 +1164,17 @@
             );
         
     
-                marker_1ac5967a51c3a4f78553c8f4b02a0788.setIcon(icon_0d69a66276e43faaa49f175e91c8e4d8);
+                marker_0cc1091642076b61c006f080249db0b7.setIcon(icon_3feddde14d15f08eb30de5748a99b270);
             
     
-            var marker_52634cc15a18cb091c2f986890cbc19a = L.marker(
+            var marker_c3393d16f25f312029323aeb9e5f99cb = L.marker(
                 [-16.682556, -49.257806],
                 {
 }
-            ).addTo(feature_group_63a13efaa69157d3db28fece7c28f826);
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
         
     
-            var icon_42c5bb03935b8833f68406b1162a47fc = L.AwesomeMarkers.icon(
+            var icon_14267a52befe68df17769c8a199f72ce = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -1136,25 +1185,25 @@
             );
         
     
-        var popup_5c0c39158f420718e013dd1a8390479b = L.popup({
+        var popup_6f46e8d1fe198afec6d89042df5104af = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_8ef19177a7822dbff17af20ad511d60c = $(`<div id="html_8ef19177a7822dbff17af20ad511d60c" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #665606788</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Avenida 85 Quadra F-17, 30, Lote 4/6 Crystal Plaza Hotel<br>                 Setor Sul, Goiânia - GO</p>                 <img src="processed_photos/665606788.jpg" alt="Foto ERB 665606788"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_5c0c39158f420718e013dd1a8390479b.setContent(html_8ef19177a7822dbff17af20ad511d60c);
+                var html_cff0c653ec2cd4eb39ca6a4a23fd08e5 = $(`<div id="html_cff0c653ec2cd4eb39ca6a4a23fd08e5" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #665606788</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Rooftop</p>                 <p><strong>Localização:</strong><br>                 Avenida 85 Quadra F-17, 30, Lote 4/6 Crystal Plaza Hotel<br>                 Setor Sul, Goiânia - GO</p>                 <img src="processed_photos/665606788.jpg" alt="Foto ERB 665606788"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_6f46e8d1fe198afec6d89042df5104af.setContent(html_cff0c653ec2cd4eb39ca6a4a23fd08e5);
             
         
 
-        marker_52634cc15a18cb091c2f986890cbc19a.bindPopup(popup_5c0c39158f420718e013dd1a8390479b)
+        marker_c3393d16f25f312029323aeb9e5f99cb.bindPopup(popup_6f46e8d1fe198afec6d89042df5104af)
         ;
 
         
     
     
-            marker_52634cc15a18cb091c2f986890cbc19a.bindTooltip(
+            marker_c3393d16f25f312029323aeb9e5f99cb.bindTooltip(
                 `<div>
                      TIM - ERB #665606788
                  </div>`,
@@ -1164,17 +1213,17 @@
             );
         
     
-                marker_52634cc15a18cb091c2f986890cbc19a.setIcon(icon_42c5bb03935b8833f68406b1162a47fc);
+                marker_c3393d16f25f312029323aeb9e5f99cb.setIcon(icon_14267a52befe68df17769c8a199f72ce);
             
     
-            var marker_e1bc7fe9c681c5345281177a2ce053a0 = L.marker(
+            var marker_c9baac1c0bcc350c60301a80f35e5134 = L.marker(
                 [-16.601306, -49.2625],
                 {
 }
-            ).addTo(feature_group_63a13efaa69157d3db28fece7c28f826);
+            ).addTo(feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b);
         
     
-            var icon_4e90dfcaba431a1adfdb13ec031c2649 = L.AwesomeMarkers.icon(
+            var icon_fd47c622d268f2bd9777daa162c65e38 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -1185,25 +1234,25 @@
             );
         
     
-        var popup_c6ddedaa0e3cd58a0c572cf1d64188fd = L.popup({
+        var popup_f32995b27db3c91c329bc23b2affaa74 = L.popup({
   "maxWidth": 300,
   "minWidth": 200,
 });
 
         
             
-                var html_9b28b4ec278230bb09bc1dcfc203e76b = $(`<div id="html_9b28b4ec278230bb09bc1dcfc203e76b" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #684053357</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 Setor Avenida Palmeiras, S/N, Universidade Federal De Goias<br>                 Itatiaia, Goiânia - GO</p>                 <img src="processed_photos/684053357.jpg" alt="Foto ERB 684053357"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
-                popup_c6ddedaa0e3cd58a0c572cf1d64188fd.setContent(html_9b28b4ec278230bb09bc1dcfc203e76b);
+                var html_f694efa95e26fa4fe8059f33f1cec725 = $(`<div id="html_f694efa95e26fa4fe8059f33f1cec725" style="width: 100.0%; height: 100.0%;">         <div class="erb-popup">             <h3>ERB #684053357</h3>             <div class="erb-info">                 <p><strong>Operadora:</strong> TIM</p>                 <p><strong>Tecnologias:</strong> 2G, 3G, 4G, 5G</p>                 <p><strong>Faixas:</strong> 700 1800 2100 2500 3500  MHz</p>                 <p><strong>Infraestrutura:</strong> Não especificada</p>                 <p><strong>Localização:</strong><br>                 Setor Avenida Palmeiras, S/N, Universidade Federal De Goias<br>                 Itatiaia, Goiânia - GO</p>                 <img src="processed_photos/684053357.jpg" alt="Foto ERB 684053357"                       style="width:100%; max-width:280px; border-radius:5px; margin-top:10px;"                      onerror="this.style.display='none'">             </div>         </div>         </div>`)[0];
+                popup_f32995b27db3c91c329bc23b2affaa74.setContent(html_f694efa95e26fa4fe8059f33f1cec725);
             
         
 
-        marker_e1bc7fe9c681c5345281177a2ce053a0.bindPopup(popup_c6ddedaa0e3cd58a0c572cf1d64188fd)
+        marker_c9baac1c0bcc350c60301a80f35e5134.bindPopup(popup_f32995b27db3c91c329bc23b2affaa74)
         ;
 
         
     
     
-            marker_e1bc7fe9c681c5345281177a2ce053a0.bindTooltip(
+            marker_c9baac1c0bcc350c60301a80f35e5134.bindTooltip(
                 `<div>
                      TIM - ERB #684053357
                  </div>`,
@@ -1213,18 +1262,18 @@
             );
         
     
-                marker_e1bc7fe9c681c5345281177a2ce053a0.setIcon(icon_4e90dfcaba431a1adfdb13ec031c2649);
+                marker_c9baac1c0bcc350c60301a80f35e5134.setIcon(icon_fd47c622d268f2bd9777daa162c65e38);
             
     
-            feature_group_63a13efaa69157d3db28fece7c28f826.addTo(map_7dcc84bf1692b46d749e7caad57f1d1f);
+            feature_group_c87bf46cc503e539b7e7f7e8b57f9b8b.addTo(map_b47541a03a0a25bd484b9a6bb789f840);
         
     
-            var tile_layer_c87111e299109ada86e8f22e7d496c0e = L.tileLayer(
+            var tile_layer_d75be1a92e38061fcca64810c3642ce8 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
-            var mini_map_c6649f55cfda7ffdede9ce9409fa2551 = new L.Control.MiniMap(
-                tile_layer_c87111e299109ada86e8f22e7d496c0e,
+            var mini_map_e9c01f2ddaee2027c09c008031539da4 = new L.Control.MiniMap(
+                tile_layer_d75be1a92e38061fcca64810c3642ce8,
                 {
   "position": "bottomright",
   "width": 150,
@@ -1239,7 +1288,7 @@
   "minimized": false,
 }
             );
-            map_7dcc84bf1692b46d749e7caad57f1d1f.addControl(mini_map_c6649f55cfda7ffdede9ce9409fa2551);
+            map_b47541a03a0a25bd484b9a6bb789f840.addControl(mini_map_e9c01f2ddaee2027c09c008031539da4);
         
     
             L.control.fullscreen(
@@ -1249,7 +1298,7 @@
   "titleCancel": "Exit Full Screen",
   "forceSeparateButton": false,
 }
-            ).addTo(map_7dcc84bf1692b46d749e7caad57f1d1f);
+            ).addTo(map_b47541a03a0a25bd484b9a6bb789f840);
         
 </script>
 </html>
