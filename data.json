@@ -2966,8 +2966,8 @@
     "class_infra_fisica": "Rooftop",
     "tecnologias": "4G, 5G",
     "faixa": "700 1800 2500 3500 ",
-    "tem_foto": false,
-    "foto_path": null
+    "tem_foto": true,
+    "foto_path": "processed_photos/1009312992.jpg"
   },
   {
     "num_estacao": "1009313000",
